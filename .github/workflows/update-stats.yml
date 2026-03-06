@@ -1,0 +1,32 @@
+name: Update YGXXD's README stats
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Generate ygxxd stats svg
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true
+          path: ygxxd_stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit ygxxd stats svg
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ygxxd_stats.svg
+          git commit -m "Update YGXXD's README stats" || exit 0
+          git push
