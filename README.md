@@ -8,4 +8,4 @@
 <code><img src="https://img.shields.io/badge/cpp-3776ab?style=for-the-badge&logo=cplusplus&logoColor=white"/></code>
 <code><img src="https://img.shields.io/badge/cmake-fb080e?style=for-the-badge&logo=cmake&logoColor=white"/></code>
 <code><img src="https://img.shields.io/badge/unreal engine-19191e?style=for-the-badge&logo=unrealengine&logoColor=white"/></code>
-<code><img src="https://img.shields.io/badge/mac osx-ededed?style=for-the-badge&logo=Apple&logoColor=black"/></code>
+<code><img src="https://img.shields.io/badge/chromium-4c8bf5?style=for-the-badge&logo=googlechrome&logoColor=white"/></code>
