@@ -16,12 +16,13 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Generate ygxxd stats svg
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true
           path: ygxxd_stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.STATS_PAT }}
+          fail_on_error: true
 
       - name: Commit ygxxd stats svg
         run: |
